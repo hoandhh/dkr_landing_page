@@ -88,11 +88,6 @@ function App() {
                 <span className="skill-tag">DJ Performance</span>
               </div>
             </div>
-            <div className="about-image">
-              <div className="image-placeholder">
-                <span>Your Photo</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
