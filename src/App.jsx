@@ -24,13 +24,23 @@ function App() {
       <section id="home" className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Creative <span className="gradient-text">Portfolio</span>
+            DINH KONG <span className="gradient-text">RADIO</span>
           </h1>
           <p className="hero-subtitle">
-            Khám phá những tác phẩm sáng tạo và dự án cá nhân của tôi
+            Electronic Music • Openformat • From Định Công with Passion
           </p>
+          <div className="hero-stats">
+            <div className="stat-item">
+              <span className="stat-number">2500+</span>
+              <span className="stat-label">Followers</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">10K+</span>
+              <span className="stat-label">Plays</span>
+            </div>
+          </div>
           <a href="#gallery" className="cta-button">
-            Xem Gallery
+            Explore Our Sound
           </a>
         </div>
         <div className="hero-decoration">
@@ -44,10 +54,10 @@ function App() {
       <section id="gallery" className="gallery-section">
         <div className="container">
           <h2 className="section-title">
-            <span className="gradient-text">Gallery</span>
+            Visual <span className="gradient-text">Gallery</span>
           </h2>
           <p className="section-subtitle">
-            Một bộ sưu tập các tác phẩm và dự án đáng chú ý
+            Những khoảnh khắc đáng nhớ từ các sự kiện và buổi biểu diễn
           </p>
           <Slideshow />
         </div>
@@ -59,8 +69,13 @@ function App() {
           <div className="about-content">
             <div className="about-text">
               <h2 className="section-title">
-                About <span className="gradient-text">Us</span>
+                Our <span className="gradient-text">Story</span>
               </h2>
+              <div className="story-intro">
+                <p className="highlight-text">
+                  Từ tầng 18 Định Công đến những sân khấu lớn nhất Hà Nội
+                </p>
+              </div>
               <p>
                 Tổ đội xuất thân từ tầng 18 Định Công cùng với niềm đam mê âm nhạc điện tử.
                 Chuyên genre <strong>Openformat</strong> với phong cách độc đáo và sáng tạo.
@@ -70,16 +85,19 @@ function App() {
                 <strong> 10.000 lượt nghe</strong>. Chúng tôi tự hào về những thành tựu âm nhạc 
                 và sự ủng hộ từ cộng đồng.
               </p>
-              <div className="achievements">
-                <h3>Artist Collaborations</h3>
-                <p>Gaztik, JAWBREAKERS, Kydz</p>
-                
-                <h3>Events</h3>
-                <p>EDMUNIVERSE (NoxxCiti), COMPLEX FEST 2024: CRAFT & PRINT UNION, 
-                RAVE PLANNET: THE LAVISH HANOI 2025, Trendy Street: City Pop-Up by Hanoi Mood:ON</p>
-                
-                <h3>Artist Support</h3>
-                <p>Gaztik, Sao Bomb, Lethimcook Radio, Dng, DAMIAN, ptt, ...</p>
+              <div className="achievements-grid">
+                <div className="achievement-card">
+                  <h3>Collaborations</h3>
+                  <p>Gaztik, JAWBREAKERS, Kydz</p>
+                </div>
+                <div className="achievement-card">
+                  <h3>Major Events</h3>
+                  <p>EDMUNIVERSE, COMPLEX FEST 2024, RAVE PLANNET 2025</p>
+                </div>
+                <div className="achievement-card">
+                  <h3>Artist Support</h3>
+                  <p>Gaztik, Sao Bomb, Lethimcook Radio, Dng, DAMIAN, ptt</p>
+                </div>
               </div>
               <div className="skills">
                 <span className="skill-tag">Openformat</span>
