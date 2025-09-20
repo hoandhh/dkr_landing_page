@@ -38,9 +38,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  /* Giảm chiều cao navbar */
+  min-height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Điều chỉnh margin cho logo nhỏ hơn */
+  margin: -20px 0;
+  z-index: 10;
+  position: relative;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 .logo span {
@@ -214,6 +239,7 @@ body {
 /* Sections */
 .gallery-section,
 .about-section,
+.members-section,
 .contact-section {
   padding: 100px 0;
 }
@@ -224,6 +250,10 @@ body {
 
 .about-section {
   background: linear-gradient(135deg, #0a1a0f 0%, #152520 100%);
+}
+
+.members-section {
+  background: linear-gradient(135deg, #0f1a14 0%, #1a251f 100%);
 }
 
 .contact-section {
@@ -361,6 +391,116 @@ body {
   color: #00ff88;
 }
 
+/* Members Section */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.member-card {
+  position: relative;
+  background: rgba(0, 255, 136, 0.05);
+  border: 2px solid rgba(0, 255, 136, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.member-card:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: #00ff88;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.3);
+}
+
+.member-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ff88, #00ccaa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+  padding: 3px;
+  overflow: hidden;
+}
+
+.member-card:hover .member-avatar {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.5);
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.member-initial {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0a1a0f;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00ff88, #00ccaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.member-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.9), rgba(0, 204, 170, 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-radius: 18px;
+}
+
+.member-card:hover .member-overlay {
+  opacity: 1;
+}
+
+.member-overlay span {
+  color: #0a1a0f;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* Contact Section */
 .contact-links {
   display: flex;
@@ -453,7 +593,18 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    min-height: 50px;
+  }
+  
+  .logo {
+    margin: -15px 0;
+    /* Giữ căn giữa trên tablet */
+    justify-content: center;
+  }
+  
+  .logo img {
+    height: 70px;
   }
   
   .nav-links {
@@ -479,6 +630,28 @@ body {
   
   .achievement-card {
     padding: 1rem;
+  }
+  
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .member-card {
+    padding: 1.5rem;
+  }
+  
+  .member-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .member-initial {
+    font-size: 1.5rem;
+  }
+  
+  .member-name {
+    font-size: 1.2rem;
   }
   
   .about-text {
@@ -520,9 +693,33 @@ body {
   .email-address {
     font-size: 1rem;
   }
+  
+  .members-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .member-card {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .nav {
+    min-height: 45px;
+    padding: 0.5rem;
+  }
+  
+  .logo {
+    margin: -10px 0;
+    /* Giữ căn giữa trên mobile */
+    justify-content: center;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
   .nav-links {
     display: none;
   }
@@ -550,6 +747,20 @@ body {
   
   .section-title {
     font-size: 2rem;
+  }
+  
+  .member-name {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  .member-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .member-initial {
+    font-size: 1.2rem;
   }
   
   .contact-link {

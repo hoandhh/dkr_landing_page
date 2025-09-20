@@ -1,26 +1,37 @@
-import { useState } from 'react'
-import Slideshow from './Slideshow'
-import './App.css'
+import { useState } from "react";
+import Slideshow from "./Slideshow";
+import "./App.css";
 
 function App() {
   return (
     <div className="app">
       {/* Header */}
-      <header className="header">
-        <nav className="nav">
-          <div className="logo">
-            <span>DINH KONG RADIO</span>
-          </div>
-          <ul className="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+        <header className="header">
+          <nav className="nav">
+            <div className="logo">
+              <img src="/dkr-logo.png" alt="Dinh Kong Radio" />
+            </div>
+            <ul className="nav-links">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+            </ul>
+          </nav>
+        </header>
 
-      {/* Hero Section */}
+        {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
@@ -31,11 +42,11 @@ function App() {
           </p>
           <div className="hero-stats">
             <div className="stat-item">
-              <span className="stat-number">2500+</span>
+              <span className="stat-number">3000+</span>
               <span className="stat-label">Followers</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">10K+</span>
+              <span className="stat-number">100K+</span>
               <span className="stat-label">Plays</span>
             </div>
           </div>
@@ -63,7 +74,7 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* /* About Section */}
       <section id="about" className="about-section">
         <div className="container">
           <div className="about-content">
@@ -77,26 +88,39 @@ function App() {
                 </p>
               </div>
               <p>
-                Tổ đội xuất thân từ tầng 18 Định Công cùng với niềm đam mê âm nhạc điện tử.
-                Chuyên genre <strong>Openformat</strong> với phong cách độc đáo và sáng tạo.
+                Tổ đội xuất thân từ tầng 18 Định Công cùng với niềm đam mê âm
+                nhạc điện tử. Chuyên genre <strong>Openformat</strong> với phong
+                cách độc đáo và sáng tạo.
               </p>
+              
               <p>
-                Đạt <strong>2500 followers</strong> trên kênh SoundCloud với các pack mashup đạt  
-                <strong> 10.000 lượt nghe</strong>. Chúng tôi tự hào về những thành tựu âm nhạc 
-                và sự ủng hộ từ cộng đồng.
+                Đạt <strong>2500 followers</strong> trên kênh SoundCloud với các
+                pack mashup đạt
+                <strong> 10.000 lượt nghe</strong>. Chúng tôi tự hào về những
+                thành tựu âm nhạc và sự ủng hộ từ cộng đồng.
               </p>
               <div className="achievements-grid">
                 <div className="achievement-card">
                   <h3>Collaborations</h3>
-                  <p>Gaztik, JAWBREAKERS, Kydz</p>
+                  <p>GAZTIK</p>
+                  <p>JAWBREAKERS</p>
+                  <p>KYDZ</p>
                 </div>
                 <div className="achievement-card">
                   <h3>Major Events</h3>
-                  <p>EDMUNIVERSE, COMPLEX FEST 2024, RAVE PLANNET 2025</p>
+                  <p>EDMUNIVERSE at NOXX CITI</p>
+                  <p>COMPLEX FEST 2024: CRAFT & PRINT UNION</p>
+                  <p>RAVE PLANNET: THE LAVISH HANOI 2025</p>
+                  <p>HANOI MOOD:ON - TRENDY CITY</p>
                 </div>
                 <div className="achievement-card">
                   <h3>Artist Support</h3>
-                  <p>Gaztik, Sao Bomb, Lethimcook Radio, Dng, DAMIAN, ptt</p>
+                  <p>GAZTIK</p>
+                  <p>SAO BOMB</p>
+                  <p>LETHIMCOOK RADIO</p>
+                  <p>DNG</p>
+                  <p>DAMIAN</p>
+                  <p>PTT</p>
                 </div>
               </div>
               <div className="skills">
@@ -106,6 +130,83 @@ function App() {
                 <span className="skill-tag">DJ Performance</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Members Section */}
+      <section id="members" className="members-section">
+        <div className="container">
+          <h2 className="section-title">
+            Our <span className="gradient-text">Team</span>
+          </h2>
+          <p className="section-subtitle">
+            Gặp gỡ những nghệ sĩ tài năng tạo nên âm nhạc của Dinh Kong Radio
+          </p>
+          <div className="members-grid">
+            <a 
+              href="https://soundcloud.com/kozdkr03" 
+              className="member-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="member-avatar">
+                <img src="/koz-avatar.png" alt="KOZ" className="member-photo" />
+              </div>
+              <h3 className="member-name">KOZ</h3>
+              <p className="member-role">Producer & DJ</p>
+              <div className="member-overlay">
+                <span>Visit SoundCloud</span>
+              </div>
+            </a>
+            
+            <a 
+              href="https://soundcloud.com/bangdkr" 
+              className="member-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="member-avatar">
+                <img src="/bang-avatar.png" alt="BANG!" className="member-photo" />
+              </div>
+              <h3 className="member-name">BANG!</h3>
+              <p className="member-role">Producer & DJ</p>
+              <div className="member-overlay">
+                <span>Visit SoundCloud</span>
+              </div>
+            </a>
+
+            <a 
+              href="https://soundcloud.com/doublehmix" 
+              className="member-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="member-avatar">
+                <img src="/doubleh-avatar.png" alt="DOUBLE.H" className="member-photo" />
+              </div>
+              <h3 className="member-name">DOUBLE.H</h3>
+              <p className="member-role">Producer & DJ</p>
+              <div className="member-overlay">
+                <span>Visit SoundCloud</span>
+              </div>
+            </a>
+            
+            <a 
+              href="https://soundcloud.com/19_kas_11" 
+              className="member-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="member-avatar">
+                <img src="/kas-avatar.png" alt="KAS" className="member-photo" />
+              </div>
+              <h3 className="member-name">KAS</h3>
+              <p className="member-role">Producer & DJ</p>
+              <div className="member-overlay">
+                <span>Visit SoundCloud</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -120,15 +221,30 @@ function App() {
             Hãy kết nối và cùng nhau tạo ra điều gì đó tuyệt vời
           </p>
           <div className="contact-links">
-            <a href="https://soundcloud.com/dinkongradio" className="contact-link" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://soundcloud.com/dinkongradio"
+              className="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>SoundCloud</span>
             </a>
-            <a href="https://www.facebook.com/DinkKongKuking" className="contact-link" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/DinkKongKuking"
+              className="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>Facebook</span>
             </a>
           </div>
           <div className="email-section">
-            <a href="mailto:dinhkongradio@gmail.com" className="email-contact" target="_blank" rel="noopener noreferrer">
+            <a
+              href="mailto:dinhkongradio@gmail.com"
+              className="email-contact"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="email-label">Email</span>
               <span className="email-address">dinhkongradio@gmail.com</span>
             </a>
@@ -143,7 +259,7 @@ function App() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
