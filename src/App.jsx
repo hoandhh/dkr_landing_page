@@ -215,7 +215,7 @@ function App() {
       <section id="contact" className="contact-section">
         <div className="container">
           <h2 className="section-title">
-            Get In <span className="gradient-text">Touch</span>
+            Contact <span className="gradient-text">Us</span>
           </h2>
           <p className="section-subtitle">
             Hãy kết nối và cùng nhau tạo ra điều gì đó tuyệt vời
