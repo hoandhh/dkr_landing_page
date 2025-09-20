@@ -94,9 +94,9 @@ function App() {
               </p>
               
               <p>
-                Đạt <strong>2500 followers</strong> trên kênh SoundCloud với các
+                Đạt <strong>3000+ followers</strong> trên kênh SoundCloud với các
                 pack mashup đạt
-                <strong> 10.000 lượt nghe</strong>. Chúng tôi tự hào về những
+                <strong> 10.000+ lượt nghe và tổng 100.000+ lượt stream</strong>. Chúng tôi tự hào về những
                 thành tựu âm nhạc và sự ủng hộ từ cộng đồng.
               </p>
               <div className="achievements-grid">
