@@ -10,7 +10,7 @@ const Slideshow = () => {
   
   // Danh sách các ảnh trong thư mục public
   const images = [
-    '/1.png',
+    // '/1.png',
     '/2.png', 
     '/3.png',
     '/4.png',
